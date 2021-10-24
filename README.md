@@ -27,6 +27,7 @@ Solução: O projeto tem como objetivo principal a realocação de qualquer esta
 Todo e qualquer estabelecimento que queira mensurar as experiências do consumidor. 
 
 ## Arquitetura
+![img](https://github.com/vinnirx/Sprint-04-Enterprise/blob/main/WhatsApp%20Image%202021-10-24%20at%2012.32.46.jpeg)
 
 ## Conclusão
 O projeto foi bem dificil para ser concluido pois tive que aprender como colocar um administrador que irá ter acesso ao cadastro de usuarios e poder acessar qualquer informação como todos os comerciantes cadastrados e poder deletar ou fazer algum update de informações pessoais e o comerciante não ter acesso a tela de cadastro e poder só simplemente cadastrar só seus produtos! e se este projeto for adiante iremos trocar a foto do github pela foto de email do comerciante para que quando acessar sua conta com seu login e senha poder ver só seus produtos cadastrados.
