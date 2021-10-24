@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:include="_template :: head"></head>
+
+<body>
+
+	<header th:include="_template :: header"></header>
+	
+	<div class="alert" th:if="${message != null}" th:text="${message}"></div>
+	
+	<div class="card">
+		<nav th:include="_template :: menu('comerciante')"></nav>
+		<a href="/comerciante/new" class="button primary action">
+			<span class="material-icons">
+				add_circle_outline
+			</span>
+			<span th:text="#{label.newcomerciante}"></span>
+		</a>
+		
+		<div class="comerciantes">
+			<div class="card comerciante" th:each="comerciante : ${comerciantes}">
+				<div>
+					<h3 th:text="${comerciante.title}"></h3>
+					<span th:text="'R$' +${comerciante.price}"></span>
+				</div>
+				<p th:text="${comerciante.description}"></p>
+				
+				
+				<div class="comerciante-actions">
+					<span>
+						<img 
+							th:if="${comerciante.user != null}"
+							class="avatar" 
+							alt="ower" 
+							th:src="${comerciante.user.avatarUrl}"
+						>
+					</span>
+					
+<!-- 					<a  -->
+<!-- 						th:if="${comerciante.user == null}" -->
+<!-- 						th:href="${'/comerciante/hold/' + comerciante.id}"  -->
+<!-- 						class="button icon primary"  -->
+<!-- 						th:title="#{comerciante.catch}"> -->
+<!-- 						<span class="material-icons"> -->
+<!-- 							back_hand -->
+<!-- 						</span> -->
+<!-- 					</a> -->
+					
+					<!-- <a 
+						th:if="${comerciante.user == #authentication.getPrincipal()}"
+						th:href="${'/comerciante/release/' + comerciante.id}" 
+						class="button icon primary" 
+						th:title="#{comerciante.catch}"> -->
+<!-- 						<span class="material-icons"> -->
+<!-- 							waving_hand -->
+<!-- 						</span> -->
+						
+						<button th:onclick="window.location.href='/comerciante/update/[[${comerciante.id}]]'" class="icon primary" th:title="#{comerciante.update}">
+						<span
+						class="material-icons yellow">update</span>
+					</button>	
+					<!-- [[${comerciante.id}]] -->
+					<button th:onclick="window.location.href='/comerciante/delete/[[${comerciante.id}]]'" class="icon primary" th:title="#{comerciante.delete}">	
+						 <span
+						class="material-icons red">delete</span>
+					</button>
+				</div>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>

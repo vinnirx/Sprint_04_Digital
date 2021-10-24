@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:include="_template :: head"></head>
+<body>
+	
+	<h1>Walle</h1>
+	
+	<section class="card form">
+	
+		<h2>Login</h2>
+		
+		<form th:action="@{/login}" method="post">
+			
+			<label for="email">Email</label>
+			<input type="email" name="username" id="email">
+			
+			<label for="pass">Senha</label>
+			<input type="password" name="password" id="pass">
+			
+			<div class="buttons">
+				<a href="/">cancelar</a>
+				<button class="primary">Entrar</button>
+			</div>
+		</form>
+	
+	</section>
+	<div th:if="${param.error}" class="alert error">Login invalido</div>
+	
+</body>
+</html>
