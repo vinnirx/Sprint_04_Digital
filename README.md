@@ -26,6 +26,9 @@ Solução: O projeto tem como objetivo principal a realocação de qualquer esta
        -Qual o público-alvo (quem serão os consumidores da solução);
 Todo e qualquer estabelecimento que queira mensurar as experiências do consumidor. 
 
+##Link Youtube
+https://www.youtube.com/watch?v=JsqoQNWawv8
+
 ## Arquitetura
 ![img](https://github.com/vinnirx/Sprint-04-Enterprise/blob/main/WhatsApp%20Image%202021-10-24%20at%2012.32.46.jpeg)
 
